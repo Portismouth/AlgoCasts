@@ -8,9 +8,12 @@
 //   palindrome("abcdefg") === false
 
 function palindrome(str) {
-  return str.split('').every((char, i) => {
-    return char === str[str.length - i - 1];
-  });
+  for(let i = 0; i < str.length/2; i++) {
+    if(str[i] !== str[str.length-i-1]){
+      return false;
+    }
+  }
+  return true;
 }
 
 module.exports = palindrome;
@@ -22,4 +25,10 @@ module.exports = palindrome;
 //     .join('');
 //
 //   return str === reversed;
+// }
+
+// function palindrome(str) {
+//   return str.split("").every((char, i) => {
+//     return char === str[str.length - i - 1];
+//   });
 // }
