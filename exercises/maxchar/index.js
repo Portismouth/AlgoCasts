@@ -8,19 +8,20 @@
 function maxChar(str) {
   //convert string to object: char is key, val is number of instances
   let max = 0;
-  let maxChar = "";
-  let chars = {};
+  let maxChar = '';
+  let charMap = {};
 
   for (let char of str) {
-    chars[char] = chars[char] + 1 || 1;
+    charMap[char] = charMap[char] + 1 || 1;
   }
 
-  for (let char in chars) {
-    if (chars[char] > max) {
-      max = chars[char];
+  for (let char in charMap) {
+    if (charMap[char] > max) {
+      max = charMap[char];
       maxChar = char;
     }
   }
+  
   return maxChar;
 }
 

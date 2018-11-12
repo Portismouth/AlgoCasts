@@ -17,30 +17,30 @@
 //       '### '
 //       '####'
 
-function steps(n, row = 0, step = "") {
-  if (n === row) {
+function steps(n, row = 0, step = '') {
+  if(n === row) {
     return;
   }
-  if (n === step.length) {
+  if(n === step.length) {
     console.log(step);
     return steps(n, row + 1);
   }
-  
-  step.length <= row ? (step += "#") : (step += " ");
 
-  steps(n, row, step);
+  step.length <= row ? (step += '#') : (step += ' ');
+
+  return steps(n, row, step);
 }
 
 module.exports = steps;
 
 // function steps(n) {
 //   for (let row = 0; row < n; row++) {
-//     let step = "";
+//     let step = '';
 //     for (let col = 0; col < n; col++) {
 //       if (col <= row) {
-//         step += "#";
+//         step += '#';
 //       } else {
-//         step += " ";
+//         step += ' ';
 //       }
 //     }
 //     console.log(step);

@@ -13,7 +13,7 @@ function chunk(array, size) {
   let index = 0;
   while (index < array.length) {
     chunkedArr.push(array.slice(index, size + index));
-    index+=size;
+    index += size;
   }
   return chunkedArr;
 }

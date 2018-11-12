@@ -11,10 +11,10 @@
 function reverseInt(n) {
   const reversed = n
     .toString()
-    .split("")
+    .split('')
     .reverse()
-    .join("");
-
+    .join('')
+  
   return parseInt(reversed) * Math.sign(n);
 }
 
@@ -25,13 +25,35 @@ module.exports = reverseInt;
 //     return 0;
 //   }
 //   let num = n.toString();
-//   let output = "";
+//   let output = '';
 //   let neg;
 //   for (let char of num) {
-//     if (char == "-") {
+//     if(char === '-') {
 //       neg = char;
 //     }
-//     if (char == "0") {
+//     if(char === '0') {
+//       break;
+//     }
+//     output = char + output;
+//   }
+//   if (neg) {
+//     output = neg + output;
+//   }
+//   return parseInt(output);
+// }
+
+// function reverseInt(n) {
+//   if (n === 0) {
+//     return 0;
+//   }
+//   let num = n.toString();
+//   let output = '';
+//   let neg;
+//   for (let char of num) {
+//     if (char == '-') {
+//       neg = char;
+//     }
+//     if (char == '0') {
 //       break;
 //     }
 //     output = char + output;
